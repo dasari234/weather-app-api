@@ -6,10 +6,10 @@ yarn-debug.log*
 yarn-error.log*
 firebase-debug.log*
 firebase-debug.*.log*
-
+functions
 # Firebase cache
 .firebase/
-
+dist
 # Firebase config
 
 # Uncomment this if you'd like others to create their own Firebase project.
