@@ -1,33 +1,31 @@
 {
-  "name": "api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "lib/index.js",
+  "name": "functions",
   "scripts": {
-    "start": "ts-node index.ts",
-    "build": "npm run lint && tsc",
-    "start:dev": "./node_modules/nodemon/bin/nodemon.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tslint": "tslint --project tsconfig.json --config tslint.json",
-    "tslint-fix": "tslint --project tsconfig.json --config tslint.json --fix"
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
   },
-  "keywords": [],
-  "author": "DASARI",
-  "license": "ISC",
+  "engines": {
+    "node": "14"
+  },
+  "main": "lib/index.js",
   "dependencies": {
-    "axios": "^0.21.1",
-    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "firebase": "^8.9.0"
+    "firebase-admin": "^9.8.0",
+    "firebase-functions": "^3.14.1"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.12",
-    "@types/express": "^4.17.7",
-    "nodemon": "^2.0.4",
-    "ts-loader": "^8.0.2",
-    "ts-node": "^8.10.2",
-    "typescript": "^3.9.7",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
-  }
+    "@typescript-eslint/eslint-plugin": "^3.9.1",
+    "@typescript-eslint/parser": "^3.8.0",
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.22.0",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^3.8.0"
+  },
+  "private": true
 }
