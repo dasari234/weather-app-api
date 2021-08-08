@@ -4,20 +4,6 @@ import { Logger } from "./logger";
 import Routes from "./routes";
 const path = require('path');
 
-import firebase from 'firebase';
-
-// firebase init goes here
-const firebaseConfig = {
-    apiKey: "AIzaSyDYF75qMG8ux1zMNShDVmGV2OqdwW5KyvI",
-    authDomain: "weather-app-api-37247.firebaseapp.com",
-    projectId: "weather-app-api-37247",
-    storageBucket: "weather-app-api-37247.appspot.com",
-    messagingSenderId: "110183422238",
-    appId: "1:110183422238:web:09300d56de51f91249110f",
-    measurementId: "G-BG25P5R9NB"
-};
-firebase.initializeApp(firebaseConfig);
-
 class App {
 
     public express: express.Application;
