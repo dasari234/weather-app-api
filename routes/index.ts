@@ -5,7 +5,7 @@ import { Logger } from "../logger";
 import Weather from "./weather";
 import IpAddress from './ipAddress';
 
-const allowedOrigins = ['http://localhost:8080', 'http://localhost:4200', 'https://weather-app-client-166ce.web.app'];
+const allowedOrigins = ['http://localhost:8080', 'http://localhost:4200', 'https://weather-app-api-37247.de.r.appspot.com'];
 
 const options: cors.CorsOptions = {
     origin: allowedOrigins
