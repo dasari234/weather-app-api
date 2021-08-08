@@ -44,3 +44,12 @@ user has the capability to enter minimum 3char to search by city name and then a
 #2 run command "npm install" to install dependencies
 #3 run command "npm run start" to start the server
 application will be running at http://localhost:8080
+
+##########
+GIT URLS
+https://github.com/dasari234/weather-app-server
+https://github.com/dasari234/weather-app-client
+
+### 
+Visual out link
+https://weather-app-client-166ce.web.app/
