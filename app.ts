@@ -9,9 +9,6 @@ class App {
     public express: express.Application;
     public logger: Logger;
 
-    // array to hold users
-    public users: any[];
-
     constructor() {
         this.express = express();
         this.middleware();
